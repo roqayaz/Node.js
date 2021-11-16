@@ -1,0 +1,29 @@
+<section class="py-2">
+  <div class="row">
+      <div class="col-md-6 text-center">
+       <h1 class="display-3 mt-3 pt-5">
+           Web Development Ebook Seller
+       </h1><p class="lead">(Inspired By Traversy Media)</p> 
+       <form action="/charge" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="{{stripePublishableKey}}"
+            data-amount="1500"
+            data-name="Web Development Ebook"
+            data-description="Ebook written by Roqayaz"
+            data-image="/img/images.png"
+            data-locale="auto">
+          </script>
+          <script>
+            // Hide default stripe button
+            document.querySelector('.stripe-button-el').style.display = 'none';
+          </script>
+          <button type="submit" class="btn btn-dark mt-2">Purchase for 15$</button>
+        </form>  
+      </div> 
+      <div class="col-md-6">
+          <img src="/img/ebook2.png" style="width:65%" alt="ebook" class="img-fluid py-5 opacity-75">
+      </div>
+  </div>  
+</section>
