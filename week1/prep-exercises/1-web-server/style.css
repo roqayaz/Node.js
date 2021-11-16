@@ -1,0 +1,15 @@
+body {
+    background-color: cadetblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+height: 20%;
+padding: 50px;
+}
+
+#content {
+    font-style: italic;
+    font-weight: bold;
+}
