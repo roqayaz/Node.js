@@ -5,7 +5,7 @@ const app = express()
 app.use(express.json());
 
 //Get Method 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('hello from backend to frontend!')
 })
  
