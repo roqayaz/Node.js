@@ -6,7 +6,7 @@ const http = require('http');
 const fs = require('fs');
 
 //create a server
-let server = http.createServer(function (req, res) {
+let server = http.createServer((req, res) => {
 	if (req.url == '/') {
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		fs.readFile('index.html', (err, data) => {
@@ -30,4 +30,7 @@ let server = http.createServer(function (req, res) {
 	
 });
 
-server.listen(3000); // The server starts to listen on port 3000
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => console.log(`The Server Is Running On Port ${PORT}`));
+
+
